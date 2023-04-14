@@ -1,5 +1,7 @@
 package cn.trunch.weidong.fragment;
 
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,19 +29,16 @@ import java.util.HashMap;
 import java.util.List;
 
 import cn.trunch.weidong.R;
-import cn.trunch.weidong.activity.SquareQuestionSearchActivity;
-import cn.trunch.weidong.vo.DiaryUserVO;
 import cn.trunch.weidong.activity.MainActivity;
 import cn.trunch.weidong.activity.SquareQuestionAddActivity;
+import cn.trunch.weidong.activity.SquareQuestionSearchActivity;
 import cn.trunch.weidong.adapter.SquareQuestionAdapter;
 import cn.trunch.weidong.entity.PageEntity;
 import cn.trunch.weidong.http.Api;
 import cn.trunch.weidong.http.ApiListener;
 import cn.trunch.weidong.http.ApiUtil;
 import cn.trunch.weidong.http.UniteApi;
-import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
-
-import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
+import cn.trunch.weidong.vo.DiaryUserVO;
 
 public class SquareQuestionFragment extends Fragment {
     private View view;
@@ -116,7 +115,7 @@ public class SquareQuestionFragment extends Fragment {
 
     private void initData() {
         Glide.with(context)
-                .load("http://www.two2two.xyz/werunImg/slogan/question.jpg")
+                .load("http://192.168.10.107:9997/werunImg/slogan/question.jpg")
                 .apply(bitmapTransform(new MultiTransformation<>(
                         new CenterCrop()
                 )))

@@ -10,7 +10,7 @@ public class ApiUtil {
     //--------------------用户常用基本信息--------------
     public final static String AK = "Iz1ipT6hAI3TVkeCroQLWXVKHmkOGTom";
     public final static String service_id = "212124";
-    public final static String IP_PORT = "http://www.two2two.xyz/back"; // IP+端口号
+    public final static String IP_PORT = "http://192.168.10.107:8080/back"; // IP+端口号   "http://www.two2two.xyz/back"
     //    private final static String IP_PORT = "http://192.168.1.107:8080/back"; // IP+端口号
 //    private final static String IP_PORT = "http://10.0.2.2:8080/back"; // IP+端口号
     private final static String MAP_API_DIS = "http://yingyan.baidu.com/api/v3/track/getdistance"; //历程查询api

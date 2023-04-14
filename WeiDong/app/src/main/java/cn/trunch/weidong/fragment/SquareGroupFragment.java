@@ -1,5 +1,7 @@
 package cn.trunch.weidong.fragment;
 
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +23,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -35,11 +36,7 @@ import cn.trunch.weidong.http.Api;
 import cn.trunch.weidong.http.ApiListener;
 import cn.trunch.weidong.http.ApiUtil;
 import cn.trunch.weidong.http.UniteApi;
-import cn.trunch.weidong.http.UploadApi;
-import jp.wasabeef.glide.transformations.CropSquareTransformation;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
-
-import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 public class SquareGroupFragment extends Fragment {
     private View view;
@@ -112,7 +109,7 @@ public class SquareGroupFragment extends Fragment {
 
     private void initData() {
         Glide.with(context)
-                .load("http://www.two2two.xyz/werunImg/slogan/group.jpg")
+                .load("http://192.168.10.107:9997/werunImg/slogan/group.jpg")
                 .apply(bitmapTransform(new MultiTransformation<>(
                         new CenterCrop(),
                         new RoundedCornersTransformation(10, 0, RoundedCornersTransformation.CornerType.ALL)

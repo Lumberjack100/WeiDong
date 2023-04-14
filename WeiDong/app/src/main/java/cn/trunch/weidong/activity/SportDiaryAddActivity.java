@@ -299,7 +299,7 @@ public class SportDiaryAddActivity extends AppCompatActivity {
                 Gson gson = new Gson();
                 List<String> imgList = gson.fromJson(uploadApi.getJsonData().toString(), new TypeToken<List<String>>() {
                 }.getType());
-                editor.insertImage("http://www.two2two.xyz/werunImg/post/" + imgList.get(0), "图片");
+                editor.insertImage("http://192.168.10.107:9997/werunImg/post/" + imgList.get(0), "图片");
                 if ("".equals(programPreview))
                     programPreview = imgList.get(0);
                 DialogUIUtils.dismiss(dialog);

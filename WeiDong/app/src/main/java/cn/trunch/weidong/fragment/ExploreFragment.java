@@ -18,7 +18,6 @@ import android.webkit.WebViewClient;
 
 import cn.trunch.weidong.R;
 import cn.trunch.weidong.activity.MainActivity;
-import cn.trunch.weidong.http.ApiUtil;
 
 public class ExploreFragment extends Fragment {
     private View view;
@@ -80,8 +79,8 @@ public class ExploreFragment extends Fragment {
 
         //加载网页
 //        exploreWebView.loadUrl("http://47.102.200.22");
-//        exploreWebView.loadUrl("http://www.baidu.com/");
-        exploreWebView.loadUrl("http://47.102.200.22/#/?token=" + ApiUtil.USER_TOKEN);
+        exploreWebView.loadUrl("http://www.baidu.com/");
+//        exploreWebView.loadUrl("http://47.102.200.22/#/?token=" + ApiUtil.USER_TOKEN);
 
         //复写shouldOverrideUrlLoading()方法，使得打开网页时不调用系统浏览器， 而是在本WebView中显示
 //        exploreWebView.setWebViewClient(new WebViewClient(){
@@ -126,7 +125,9 @@ public class ExploreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 exploreWebView.clearHistory();
-                exploreWebView.loadUrl("http://47.102.200.22/#/?token=" + ApiUtil.USER_TOKEN);
+//                exploreWebView.loadUrl("http://47.102.200.22/#/?token=" + ApiUtil.USER_TOKEN);
+                exploreWebView.loadUrl("http://www.baidu.com/");
+
             }
         });
     }

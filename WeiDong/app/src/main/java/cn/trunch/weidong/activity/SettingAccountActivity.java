@@ -1,17 +1,17 @@
 package cn.trunch.weidong.activity;
 
-import android.content.Context;
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
@@ -20,8 +20,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
-import com.yanzhenjie.permission.Rationale;
-import com.yanzhenjie.permission.RequestExecutor;
 import com.yanzhenjie.permission.runtime.Permission;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
@@ -40,8 +38,6 @@ import cn.trunch.weidong.http.UploadApi;
 import cn.trunch.weidong.util.Glide4Engine;
 import cn.trunch.weidong.util.PathUtil;
 import cn.trunch.weidong.util.StatusBarUtil;
-
-import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 public class SettingAccountActivity extends AppCompatActivity {
 
@@ -195,8 +191,8 @@ public class SettingAccountActivity extends AppCompatActivity {
                 ApiUtil.USER_NAME = settingAccountName.getText().toString();
                 editor.putString("userName", settingAccountName.getText().toString());
                 if (!"".equals(avatarName)) {
-                    ApiUtil.USER_AVATAR = "http://www.two2two.xyz/werunImg/head/" + avatarName;
-                    editor.putString("userAvatar", "http://www.two2two.xyz/werunImg/head/" + avatarName);
+                    ApiUtil.USER_AVATAR = "http://192.168.10.107:9997/head/" + avatarName;
+                    editor.putString("userAvatar", "http://192.168.10.107:9997/head/" + avatarName);
                 }
                 editor.apply();
                 DialogUIUtils.showToastCenter("资料保存成功");
