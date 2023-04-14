@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 8080
   servlet:
     context-path: /back
 
@@ -7,16 +7,16 @@ spring:
   messages:
     encoding: utf-8
   datasource:
-    url: jdbc:mysql://localhost:3306/werun?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+    url: jdbc:mysql://101.35.248.3:3306/werun?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
     username: werundba
     password: werunpro
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   servlet:
     multipart:
       max-file-size: 20MB
   #  redis config
   redis:
-    host: 127.0.0.1
+    host: 101.35.248.3
     password:
     port: 6379
     jedis:
@@ -42,14 +42,14 @@ mybatis:
 
 FileOp:
   upload:
-    path: /usr/local/werunImg/
-    headPath: /usr/local/werunImg/head/
-    goodPath: /usr/local/werunImg/good/
-    postPath: /usr/local/werunImg/post/
+    path: /Users/gonghe/work/werunImg/
+    headPath: /Users/gonghe/work/werunImg/head/
+    goodPath: /Users/gonghe/work/werunImg/good/
+    postPath: /Users/gonghe/work/werunImg/post/
   werunImg:
-    head: http://www.two2two.xyz/werunImg/head/
-    good: http://www.two2two.xyz/werunImg/good/
-    post: http://www.two2two.xyz/werunImg/post/
+    head: http://192.168.10.107:9997/head/
+    good: http://192.168.10.107:9997/good/
+    post: http://192.168.10.107:9997/post/
 
 
 #logging.level.com.werun.back.dao: debug

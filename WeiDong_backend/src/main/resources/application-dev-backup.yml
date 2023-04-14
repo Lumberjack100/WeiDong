@@ -7,14 +7,14 @@ spring:
   messages:
     encoding: utf-8
   datasource:
-    url: jdbc:mysql://101.35.248.3:3306/werun?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+    url: jdbc:mysql://www.two2two.xyz:3306/werun?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
     username: werundba
     password: werunpro
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
   servlet:
     multipart:
       max-file-size: 20MB
-  #  redis config
+#  redis config
   redis:
     host: 47.94.81.127
     password:
@@ -31,10 +31,10 @@ spring:
         min-idle: 3
 
 web:
-  upload:
-    path: /werunImg
-  resources:
-    static-locations: classpath:/static/,classpath:/templates/,file:${web.upload.path}
+    upload:
+      path: /werunImg
+    resources:
+      static-locations: classpath:/static/,classpath:/templates/,file:${web.upload.path}
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
@@ -47,9 +47,9 @@ FileOp:
     goodPath: D://upload//good//
     postPath: D://upload//post//
   werunImg:
-    head: http://101.35.248.3/werunImg/head/
-    good: http://101.35.248.3/werunImg/good/
-    post: http://101.35.248.3/werunImg/post/
+    head: http://www.two2two.xyz/werunImg/head/
+    good: http://www.two2two.xyz/werunImg/good/
+    post: http://www.two2two.xyz/werunImg/post/
 
 logging.level.com.werun.back.dao: debug
 
