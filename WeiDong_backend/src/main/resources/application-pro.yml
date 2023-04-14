@@ -42,14 +42,14 @@ mybatis:
 
 FileOp:
   upload:
-    path: /Users/gonghe/work/werunImg/
-    headPath: /Users/gonghe/work/werunImg/head/
-    goodPath: /Users/gonghe/work/werunImg/good/
-    postPath: /Users/gonghe/work/werunImg/post/
+    path: /Users/gonghe/work/Demo/SportDemo/WeiDong/werunImg/
+    headPath: /Users/gonghe/work/Demo/SportDemo/WeiDong/werunImg/head/
+    goodPath: /Users/gonghe/work/Demo/SportDemo/WeiDong/werunImg/good/
+    postPath: /Users/gonghe/work/Demo/SportDemo/WeiDong/werunImg/post/
   werunImg:
-    head: http://192.168.10.107:9997/head/
-    good: http://192.168.10.107:9997/good/
-    post: http://192.168.10.107:9997/post/
+    head: http://192.168.10.107:9997/werunImg/head/
+    good: http://192.168.10.107:9997/werunImg/good/
+    post: http://192.168.10.107:9997/werunImg/post/
 
 
 #logging.level.com.werun.back.dao: debug
